@@ -1,118 +1,4 @@
-// 'use client';
-
-// import { Input } from '@/components/ui/input';
-// import { Label } from '@/components/ui/label';
-// import { Button } from '@/components/ui/button';
-// import {
-//   Select,
-//   SelectTrigger,
-//   SelectContent,
-//   SelectItem,
-// } from '@/components/ui/select';
-// import { toast } from 'sonner';
-// import { useState } from 'react';
-
-// export default function ApplyPage() {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     age: '',
-//     phone: '',
-//     profession: '',
-//   });
-
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleProfession = (value: string) => {
-//     setFormData({ ...formData, profession: value });
-//   };
-
-//   const handleSubmit = () => {
-//     toast.success('Your data has been submitted!');
-//     console.log(formData);
-//   };
-
-//   return (
-//     <div className="max-w-xl mx-auto space-y-4 p-6 ">
-//        <div className="max-w-xl -mt-12 mx-auto space-y-4 p-6 "></div>
-//       <h2 className="text-xl ml-44 text-white font-semibold">Apply Here</h2>
-      
-//        <div className="text-white">
-//   <Label htmlFor="name">Name</Label>
-//   <Input
-//     type="text"
-//     name="name"
-//     value={formData.name}
-//     onChange={(e) => {
-//       const value = e.target.value;
-//       if (/^[a-zA-Z\s]*$/.test(value)) { // allows only letters and spaces
-//         setFormData({ ...formData, name: value });
-//       }
-//     }}
-//     max={20}
-//   />
-// </div>
-
-      
-//      <div className="text-white">
-//   <Label htmlFor="name">Age</Label>
-//   <Input
-//     type="text"
-//     name="age"
-//     value={formData.age}
-//     onChange={(e) => {
-//       const value = e.target.value;
-//       if (/^\d{0,2}$/.test(value)) {
-//         setFormData({ ...formData, age: value });
-//       }
-//     }}
-//     max={99}
-//     inputMode="numeric"
-//     className="bg-transparent text-white [&::-webkit-inner-spin-button]:text-white [&::-webkit-outer-spin-button]:text-white"
-//           />
-//           </div>
-
-
-// <div className="text-white">
-//   <Label htmlFor="phone">Phone No.</Label>
-//   <Input
-//     type="text"
-//     name="phone"
-//     value={formData.phone}
-//     onChange={(e) => {
-//       const value = e.target.value;
-//       if (/^\d{0,11}$/.test(value)) { // only allow digits
-//         setFormData({ ...formData, phone: value });
-//       }
-//     }}
-//     inputMode="numeric" // show numeric keyboard on mobile
-//     pattern="\d*"
-//   />
-// </div>
-
-//       <div className='text-white'>
-//         <Label htmlFor="profession">Profession</Label>
-//         <Select onValueChange={handleProfession}>
-//           <SelectTrigger>{formData.profession || 'Select Profession'}</SelectTrigger>
-//           <SelectContent>
-//             <SelectItem value="instrumentalist">Instrumentalist</SelectItem>
-//             <SelectItem value="instruments maintainer">Instruments Maintainer</SelectItem>
-//           </SelectContent>
-//         </Select>
-//       </div>
-
-//       <Button onClick={handleSubmit}>Submit</Button>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-'use client';
+ 'use client';
 
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -126,19 +12,22 @@ import {
 import { toast } from 'sonner';
 import { useState } from 'react';
 
+// Define the FormData type
+type FormData = {
+  name: string;
+  age: string;
+  phone: string;
+  profession: string;
+};
+
 function MyComponent({
   formData,
   setFormData,
   handleProfession,
   handleSubmit,
 }: {
-  formData: {
-    name: string;
-    age: string;
-    phone: string;
-    profession: string;
-  };
-  setFormData: React.Dispatch<React.SetStateAction<any>>;
+  formData: FormData; // Use FormData type here
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>; // Use FormData type here
   handleProfession: (value: string) => void;
   handleSubmit: () => void;
 }) {
@@ -169,7 +58,7 @@ function MyComponent({
               onChange={(e) => {
                 const value = e.target.value;
                 if (/^[a-zA-Z\s]*$/.test(value)) {
-                  setFormData((prev: any) => ({ ...prev, name: value }));
+                  setFormData((prev: FormData) => ({ ...prev, name: value }));
                 }
               }}
               maxLength={20}
@@ -186,7 +75,7 @@ function MyComponent({
               onChange={(e) => {
                 const value = e.target.value;
                 if (/^\d{0,2}$/.test(value)) {
-                  setFormData((prev: any) => ({ ...prev, age: value }));
+                  setFormData((prev: FormData) => ({ ...prev, age: value }));
                 }
               }}
               maxLength={2}
@@ -204,7 +93,7 @@ function MyComponent({
               onChange={(e) => {
                 const value = e.target.value;
                 if (/^\d{0,11}$/.test(value)) {
-                  setFormData((prev: any) => ({ ...prev, phone: value }));
+                  setFormData((prev: FormData) => ({ ...prev, phone: value }));
                 }
               }}
               inputMode="numeric"
@@ -259,7 +148,7 @@ function MyComponent({
 }
 
 export default function ApplyPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     age: '',
     phone: '',
