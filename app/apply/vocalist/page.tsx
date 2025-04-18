@@ -236,7 +236,7 @@ function MyComponent({
         >
           <h2
             className="text-3xl ml-40 mt-2 mb-4 text-white font-semibold"
-            style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px' }}
+            style={{ fontFamily: 'Poppins,sans-serif', fontSize: '38px' }}
           >
             Vocalist
           </h2>
@@ -360,6 +360,8 @@ export default function ApplyPage() {
         style: {
           fontFamily: 'Poppins, sans-serif',
           fontSize: '16px',
+          color: '#fff',
+          backgroundColor: '#111',
         },
       });
       return;
@@ -367,8 +369,8 @@ export default function ApplyPage() {
 
     toast.success('Your data has been submitted!', {
       style: {
-        fontFamily: 'Dancing Script, cursive',
-        fontSize: '18px',
+        fontFamily: ' Poppins,sans-serif ',
+        fontSize: '16px',
         color: '#fff',
         backgroundColor: '#111',
       },

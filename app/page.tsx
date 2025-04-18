@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 3000); // 3 seconds splash screen
+    }, 2000); // 2 seconds splash screen
 
     return () => clearTimeout(timer);
   }, []);

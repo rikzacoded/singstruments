@@ -1,6 +1,6 @@
 
 import { ReactNode } from 'react';
-// import { Toaster } from 'sonner';
+
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
@@ -13,6 +13,7 @@ export default function InnerLayout({ children }: { children: ReactNode }) {
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
+       
       }}
     >
       <Sidebar />
@@ -20,7 +21,7 @@ export default function InnerLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main className="p-6">{children}</main>
       </div>
-      {/* <Toaster position="top-center" style={{ width: '11%' }} /> */}
+    
     </div>
   );
 }

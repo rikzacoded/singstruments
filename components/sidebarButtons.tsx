@@ -8,7 +8,7 @@ const handleOnClick = () => {
     position: "top-center",
     style: {
       fontFamily:  'Poppins, sans-serif',
-      fontSize: "12px",
+      fontSize: "16px",
       color: "#fff",
       backgroundColor: "#111",
     },

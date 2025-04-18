@@ -35,15 +35,15 @@ function MyComponent({
   const [hoveredmaintainer, setHoveredMaintainer] = useState(false);
 
   return (
-    <div className="max-w-xl -mt-8 mx-auto p-6 ">
-      <div className="flex justify-center items-center">
+    <div className="max-w-xl  -mt-8 mx-auto  p-6 ">
+      <div className="flex justify-center items-center ">
         <div
-          className="bg-black/70 mr-8 shadow-lg mt-12 mb-8 p-4 h-108"
+          className="bg-black/70  mr-8 shadow-lg mt-12 mb-8 p-4 h-108"
           style={{ width: '115%', maxWidth: '600px', minWidth: '280px' }}
         >
           <h2
             className="text-3xl ml-24 mt-2 mb-4 text-white font-semibold"
-            style={{ fontFamily: 'Playfair Display, serif', fontSize: '38px' }}
+            style={{ fontFamily: 'Poppins,sans-serif', fontSize: '38px' }}
           >
             Instrumentalist
           </h2>
@@ -167,6 +167,8 @@ export default function ApplyPage() {
         style: {
           fontFamily: 'Poppins, sans-serif',
           fontSize: '16px',
+          color: '#fff',
+          backgroundColor: '#111',
         },
       });
       return;
@@ -174,8 +176,8 @@ export default function ApplyPage() {
 
     toast.success('Your data has been submitted!', {
       style: {
-        fontFamily: 'Dancing Script, cursive',
-        fontSize: '18px',
+        fontFamily: 'Poppins,sans-serif',
+        fontSize: '16px',
         color: '#fff',
         backgroundColor: '#111',
       },
