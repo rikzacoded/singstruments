@@ -1,0 +1,6 @@
+// pages/index.tsx
+import SplashScreen from '../components/SplashScreen';
+
+export default function Home() {
+  return <SplashScreen />;
+}
