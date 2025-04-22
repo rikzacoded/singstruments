@@ -35,7 +35,7 @@ function MyComponent({
   const [hoveredmaintainer, setHoveredMaintainer] = useState(false);
 
   return (
-    <div className="max-w-xl  -mt-8 mx-auto  p-6 ">
+    <div className="max-w-xl -mt-8 mx-auto  p-6 ">
       <div className="flex justify-center items-center ">
         <div
           className="bg-black/70  mr-8 shadow-lg mt-12 mb-8 p-4 h-108"
@@ -43,7 +43,7 @@ function MyComponent({
         >
           <h2
             className="text-3xl ml-24 mt-2 mb-4 text-white font-semibold"
-            style={{ fontFamily: 'Poppins,sans-serif', fontSize: '38px' }}
+            style={{ fontFamily: 'Poppins, sans-serif', fontSize: '38px' }}
           >
             Instrumentalist
           </h2>
@@ -121,7 +121,7 @@ function MyComponent({
                   Instrumentalist
                 </SelectItem>
                 <SelectItem
-                  value="instrumental maintainer"
+                  value="instruments maintainer"
                   style={{
                     backgroundColor: hoveredmaintainer ? '#424142' : 'transparent',
                     transition: 'background-color 0.3s ease',
@@ -129,7 +129,7 @@ function MyComponent({
                   onMouseEnter={() => setHoveredMaintainer(true)}
                   onMouseLeave={() => setHoveredMaintainer(false)}
                 >
-                 Instrumental Maintainer
+                 Instruments Maintainer
                 </SelectItem>
               </SelectContent>
             </Select>
