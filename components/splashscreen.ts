@@ -14,7 +14,7 @@ export default function SplashScreen() {
       sessionStorage.setItem('hasVisited', 'true');
       const timer = setTimeout(() => {
         setShowSplash(false);
-      }, 3000); // Adjust duration if needed
+      }, 5000); // Adjust duration if needed
 
       return () => clearTimeout(timer);
     }
@@ -31,7 +31,8 @@ export default function SplashScreen() {
         justifyContent: 'center',
         height: '100vh',
         width: '100vw',
-        backgroundImage: 'url("/sing_it2.jpg")',
+        backgroundImage: 'url("/sing.jpg")',
+          
         backgroundSize: '100% 100%',
         backgroundPosition: 'center',
       },

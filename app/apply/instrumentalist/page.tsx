@@ -35,21 +35,20 @@ function MyComponent({
   const [hoveredmaintainer, setHoveredMaintainer] = useState(false);
 
   return (
-    <div className="max-w-xl -mt-8 mx-auto  p-6 ">
+   <div className="w-full sm:max-w-xl mx-auto px-4 sm:px-0 py-6">
       <div className="flex justify-center items-center ">
-        <div
-          className="bg-black/70  mr-8 shadow-lg mt-12 mb-8 p-4 h-108"
-          style={{ width: '115%', maxWidth: '600px', minWidth: '280px' }}
-        >
+    <div
+  className="bg-black/70 shadow-lg mt-6 sm:mt-10 md:mt-12 mb-8 p-4 sm:p-6 rounded-lg w-full max-w-[600px]"
+>
           <h2
-            className="text-3xl ml-24 mt-2 mb-4 text-white font-semibold"
+        className="text-center md:text-left text-2xl sm:text-3xl md:text-3xl font-semibold text-white mb-6 md:ml-24 md:mt-2"
             style={{ fontFamily: 'Poppins, sans-serif', fontSize: '38px' }}
           >
             Instrumentalist
           </h2>
 
           {/* Name Input */}
-          <div className="text-white ml-18">
+          <div className="text-white mb-4 md:ml-18">
             <Label htmlFor="name">Name</Label>
             <Input
               type="text"
@@ -66,7 +65,7 @@ function MyComponent({
           </div>
 
           {/* Age Input */}
-          <div className="text-white mt-2 ml-18">
+          <div className="text-white mb-4 md:ml-18">
             <Label htmlFor="age">Age</Label>
             <Input
               type="text"
@@ -84,7 +83,7 @@ function MyComponent({
           </div>
 
           {/* Phone Input */}
-          <div className="text-white mt-2 ml-18">
+          <div className="text-white mb-4 md:ml-18">
             <Label htmlFor="phone">Phone No.</Label>
             <Input
               type="text"
@@ -102,10 +101,10 @@ function MyComponent({
           </div>
 
           {/* Profession Select */}
-          <div className="text-white mt-2 mb-4 ml-18">
+          <div className="text-white mb-6 md:ml-18">
             <Label htmlFor="profession">Profession</Label>
             <Select onValueChange={handleProfession}>
-              <SelectTrigger style={{ width: '75%' }}>
+             <SelectTrigger className="w-full md:w-[75%]">
                 {formData.profession || 'Select Profession'}
               </SelectTrigger>
               <SelectContent>
@@ -136,8 +135,12 @@ function MyComponent({
           </div>
 
           {/* Submit Button */}
-          <div className="ml-18">
-            <Button onClick={handleSubmit} style={{ width: '75%' }}>
+        <div className="md:ml-18">
+           <Button
+                onClick={handleSubmit}
+                  className="w-full md:w-[75%]"
+                    style={{ backgroundColor: '#311536' }}
+                         >
               Submit
             </Button>
           </div>
@@ -168,7 +171,7 @@ export default function ApplyPage() {
           fontFamily: 'Poppins, sans-serif',
           fontSize: '16px',
           color: '#fff',
-          backgroundColor: '#111',
+          backgroundColor: '#311536',
         },
       });
       return;
@@ -179,7 +182,7 @@ export default function ApplyPage() {
         fontFamily: 'Poppins,sans-serif',
         fontSize: '16px',
         color: '#fff',
-        backgroundColor: '#111',
+        backgroundColor: '#311536',
       },
     });
 
