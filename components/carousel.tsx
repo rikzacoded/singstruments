@@ -27,7 +27,7 @@ return (
       <img
         src={images[index]}
         alt={`Slide ${index + 1}`}
-        className="w-full h-full  bg-black/84 rounded-xl object-cover shadow-xl border-2 border-indigo-950"
+        className="w-full h-full  bg-black/70 shadow-xl rounded-xl object-cover border-2 border-indigo-950"
       />
 
     <h2

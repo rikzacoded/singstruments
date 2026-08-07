@@ -48,7 +48,7 @@ const [hoveredVocalist, setHoveredVocalist] = useState(false);
           </h2>
 
           {/* Name Input */}
-          <div className="text-white mb-4 md:ml-18">
+          <div className="text-white mb-4 md:ml-18 md:w-2/3">
             <Label htmlFor="name">Name</Label>
             <Input
               type="text"
@@ -65,7 +65,7 @@ const [hoveredVocalist, setHoveredVocalist] = useState(false);
           </div>
 
           {/* Age Input */}
-          <div className="text-white mb-4 md:ml-18">
+          <div className="text-white mb-4 md:ml-18 md:w-2/3">
             <Label htmlFor="age">Age</Label>
             <Input
               type="text"
@@ -83,7 +83,7 @@ const [hoveredVocalist, setHoveredVocalist] = useState(false);
           </div>
 
           {/* Phone Input */}
-          <div className="text-white mb-4 md:ml-18">
+          <div className="text-white mb-4 md:ml-18 md:w-2/3">
             <Label htmlFor="phone">Phone No.</Label>
             <Input
               type="text"
@@ -104,7 +104,7 @@ const [hoveredVocalist, setHoveredVocalist] = useState(false);
           <div className="text-white mb-6 md:ml-18">
             <Label htmlFor="profession">Profession</Label>
             <Select onValueChange={handleProfession}>
-             <SelectTrigger className="w-full md:w-[75%]">
+             <SelectTrigger className="w-full md:w-[77%]">
                 {formData.profession || 'Select Profession'}
               </SelectTrigger>
              <SelectContent>
@@ -139,7 +139,7 @@ const [hoveredVocalist, setHoveredVocalist] = useState(false);
         <div className="md:ml-18">
            <Button
                 onClick={handleSubmit}
-                  className="w-full md:w-[75%]"
+                  className="w-full md:w-[77%]"
                     style={{ backgroundColor: '#311536' }}
                          >
               Submit
