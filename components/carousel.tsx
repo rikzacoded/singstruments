@@ -21,18 +21,32 @@ const Carousel: React.FC = () => {
 
     return () => clearInterval(interval);
   }, []);
+return (
+  <div className="w-full max-w-5xl mx-auto px-4 mt-4  sm:mt-6 md:mt-8">
+    <div className="relative aspect-[16/9]">
+      <img
+        src={images[index]}
+        alt={`Slide ${index + 1}`}
+        className="w-full h-full  bg-black/84 rounded-xl object-cover shadow-xl border-2 border-indigo-950"
+      />
 
-  return (
-    <div className="w-1/2 max-w-5xl mx-auto mt-4 sm:mt-6 md:mt-8 px-4">
-      <div className="h-56 sm:h-72 md:h-96">
-        <img
-          src={images[index]}
-          alt={`Slide ${index + 1}`}
-          className="w-full h-full rounded-xl object-cover shadow-xl border-2 border-indigo-950"
-        />
-      </div>
+    <h2
+  className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-white font-bold drop-shadow-lg"
+  style={{ fontFamily: "Poppins, sans-serif" }}
+>
+  <div>
+    <span className="text-xl sm:text-2xl md:text-3xl">Where </span>
+    <span className="text-4xl sm:text-3xl md:text-5xl">Passion</span>
+    <span className="text-xl sm:text-2xl md:text-3xl"> Meets</span>
+  </div>
+
+  <span className="text-4xl sm:text-5xl md:text-7xl leading-none">
+    Performance
+  </span>
+</h2>
     </div>
-  );
+  </div>
+);
 };
 
 export default Carousel;

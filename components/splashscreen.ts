@@ -33,8 +33,10 @@ export default function SplashScreen() {
         width: '100vw',
         backgroundImage: 'url("/sing.jpg")',
           
-        backgroundSize: '100% 100%',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        
       },
     },
     createElement(
